@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" font-family="Menlo, Consolas, monospace" font-size="14">
+  <rect width="760" height="430" rx="10" fill="#101418"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="380" y="27" fill="#8b949e" text-anchor="middle" font-size="12">flakesift — which tests are lying to you?</text>
+  <g fill="#c9d1d9">
+    <text x="24" y="62"><tspan fill="#7ee787">$</tspan> flakesift score ci-history/</text>
+    <text x="24" y="92"><tspan fill="#79c0ff">flakesift score</tspan> — 20 runs, 5 tests</text>
+    <text x="24" y="126" fill="#d2a8ff">score  class    runs  fail%  flips  retries  last  test</text>
+    <text x="24" y="150"><tspan fill="#f778ba"> 95.0  flaky   </tspan>   20   50.0     19        0  fail  orders.CartTest::testCheckoutRace</text>
+    <text x="24" y="172"><tspan fill="#f778ba"> 30.0  flaky   </tspan>   20    0.0      0        6  pass  auth.SessionTest::testLoginRetry</text>
+    <text x="24" y="194"><tspan fill="#ffbd2e">  5.0  suspect </tspan>   20   30.0      1        0  fail  billing.InvoiceTest::testRounding</text>
+    <text x="24" y="216"><tspan fill="#ff7b72">  0.0  broken  </tspan>   20  100.0      0        0  fail  search.IndexTest::testMigration</text>
+    <text x="24" y="238"><tspan fill="#7ee787">  0.0  healthy </tspan>   20    0.0      0        0  pass  search.IndexTest::testTokenize</text>
+    <text x="24" y="278"><tspan fill="#7ee787">$</tspan> flakesift trend --buckets 5 ci-history/</text>
+    <text x="24" y="308">fail rate   <tspan fill="#ff7b72">▅▅▅▇█</tspan>  (max 50.0%)</text>
+    <text x="24" y="330">flake rate  <tspan fill="#f778ba">▆▇██▇</tspan>  (max 30.0%)</text>
+    <text x="24" y="370"><tspan fill="#7ee787">$</tspan> flakesift quarantine --format gotest ci-history/</text>
+    <text x="24" y="400" fill="#79c0ff">^(testCheckoutRace|testLoginRetry)$</text>
+  </g>
+</svg>
